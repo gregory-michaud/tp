@@ -19,11 +19,15 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+    testRuntimeOnly 'com.h2database:h2'
+    runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'org.springframework.boot:spring-boot-starter-jdbc-test'
 }
 
 tasks.named('test') {
